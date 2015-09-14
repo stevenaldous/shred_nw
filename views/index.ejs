@@ -1,5 +1,35 @@
-<div ng-app="ShredApp">
+<div id="pageForm" layout="column" ng-app="ShredApp">
+  <div ng-controller="NavCtrl" layout="column">
+    <section layout="row" flex>
+      <md-sidenav flex="10" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+        <md-toolbar class="md-theme-brown">
+          <h1 class="md-toolbar-tools">Shred WA</h1>
+        </md-toolbar>
+        <md-content layout-padding ng-controller="LeftCtrl">
+          <md-button ng-click="close()" class="md-primary" hide-gt-md>
+            Close
+          </md-button>
+          <md-list>
+            <md-list-item><a href="/">home</a></md-list-item>
+            <md-list-item><a href="/snow">snow</a></md-list-item>
+            <md-list-item><a href="/dirt">dirt</a></md-list-item>
+          </md-list>
 
-<ng-view></ng-view>
 
+
+        </md-content>
+      </md-sidenav>
+      <md-content flex="90" layout-padding>
+        <div layout="column" layout-fill layout-align="top center">
+          <md-button ng-click="toggleLeft()"
+              class="md-primary" hide-gt-md>
+            Open Nav
+          </md-button>
+        </div>
+
+        <ng-view></ng-view>
+
+       </md-content>
+    </section>
+  </div>
 </div>
