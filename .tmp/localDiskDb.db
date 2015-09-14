@@ -1,0 +1,40 @@
+{
+  "data": {
+    "dirt": [],
+    "snow": []
+  },
+  "schema": {
+    "dirt": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "snow": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "dirt": {},
+    "snow": {}
+  }
+}

@@ -9,7 +9,7 @@ ShredApp.config(['$routeProvider','$locationProvider','sailsResourceProvider',
 
 
   sailsResourceProvider.configuration = {
-    prefix: '',
+    prefix: '/api',
     verbose: true
   };
 
