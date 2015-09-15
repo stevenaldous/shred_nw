@@ -8,6 +8,32 @@
 module.exports = {
 
   attributes: {
+    attributes: {
+    name:{
+      type:'string'
+    },
+    city:{
+      type:'string'
+    },
+    url:{
+      type:'string'
+    },
+    lat:{
+      type:'float'
+    },
+    lon:{
+      type:'float'
+    },
+    rating:{
+      type:'integer'
+    },
+    description:{
+      type:'text'
+    },
+    image:{
+      type:'string'
+    }
+  }
 
   }
 };

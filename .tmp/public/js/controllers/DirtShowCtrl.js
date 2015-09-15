@@ -1,16 +1,17 @@
-ShredApp.controller('DirtShowCtrl',['$scope','$http',function($scope,$http){
+ShredApp.controller('DirtShowCtrl',
+  ['$scope','$http', '$routeParams','$rootScope','Dirt',function
+  ($scope,$http,$routeParams,$rootScope,Dirt){
+
   console.log('Dirt Index')
 
-  $scope.dirtTrails=[]
-
+  $rootScope.loading=true
+  $scope.trail={}
   console.log('getting dirt')
 
-  return $http({
-    url:'/api/dirt/:id'
-  }).then(function(data){
-    console.log(data.data.places)
-    $scope.dirtTrails = data.data.places
-  });
+  Dirt.get({id: $routeParams.id}).then(function(trail){
+    console.log(trail)
+    $scope.trail = trail;
+    $rootScope.loading=false;
+  })
 
-  console.log("dirtTrails: ", $scope.dirtTrails)
 }])

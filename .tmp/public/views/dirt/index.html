@@ -2,16 +2,19 @@
   <thead>
     <tr>
       <th>Trail Name</th>
+      <th>Weather</th>
+      <th>Temp</th>
       <th>City</th>
       <th>link</th>
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="trail in dirtTrails">
-      <td><a href="/dirt/show">{{trail.name}}</a></td>
-      <td>{{trail.city}}</td>
-      <!-- <td>{{trail.activities[0].unique_id}}</td> -->
-      <td><a target="_blank" href="{{trail.activities[0].url}}">more info</a></td>
+    <tr ng-repeat="trail in dirtTrails" weather lat="trail.lat" lon="trail.lon">
+      <td><a href="/dirt/{{$parent.trail.id}}">{{$parent.trail.name}}</a></td>
+      <td>{{weatherData[0].weather[0].main}}</td>
+      <td>{{weatherData[0].main.temp}}°</td>
+      <td>{{$parent.trail.city}}</td>
+      <td><a target="_blank" href="{{$parent.trail.url}}">more info</a></td>
     </tr>
   </tbody>
 </table>

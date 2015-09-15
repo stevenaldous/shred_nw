@@ -2,9 +2,6 @@ ShredApp.controller('NavCtrl',['$scope',function($scope){
   $scope.navCollapsed=true;
 }])
 
-
-
-
 // //////// material nav controller///////
 // ShredApp.controller('NavCtrl',
 //   ['$scope', '$timeout', '$mdSidenav', '$mdUtil', '$log', '$timeout',

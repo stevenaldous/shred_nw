@@ -1,9 +1,9 @@
 body{
-  background-color: #C8CAB9;
+  background-color: #FFFFFF;
   margin-top: 50px;
 }
 .navbar{
   border-style: none;
-  background-color: rgba(255,255,255,1);
+  background-color: #C8CAB9;
   color: rgba(0,0,0,1);
 }

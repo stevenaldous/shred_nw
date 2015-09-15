@@ -1,4 +1,4 @@
-var ShredApp = angular.module('ShredApp', ['ngMaterial','ngRoute','sailsResource','ngMessages'])
+var ShredApp = angular.module('ShredApp', ['ngMaterial','ngRoute','sailsResource','ngMessages','ui.bootstrap'])
 console.log('its working!')
 
 ShredApp.config(['$routeProvider','$locationProvider','sailsResourceProvider',
@@ -28,7 +28,7 @@ ShredApp.config(['$routeProvider','$locationProvider','sailsResourceProvider',
     templateUrl: '/views/dirt/index.html',
     controller: 'DirtCtrl'
   })
-  .when('/dirt/show',{
+  .when('/dirt/:id',{
     templateUrl: '/views/dirt/show.html',
     controller: 'DirtShowCtrl'
   })
