@@ -3,11 +3,14 @@ ShredApp.controller('DirtCtrl',['$scope','$http',function($scope,$http){
 
   $scope.dirtTrails=[]
 
-    console.log('getting dirt')
-    return $http({
-      url:'/api/dirt'
-    }).then(function(data){
-      console.log(data)
-      $scope.dirtTrails.push(data)
-    });
+  console.log('getting dirt')
+
+  return $http({
+    url:'/api/dirt'
+  }).then(function(data){
+    console.log(data.data.places)
+    $scope.dirtTrails = data.data.places
+  });
+
+  console.log("dirtTrails: ", $scope.dirtTrails)
 }])

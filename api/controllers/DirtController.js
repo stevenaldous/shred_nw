@@ -13,7 +13,7 @@ module.exports = {
     qs:{
       'api_key':process.env.TRAILS_API,
       'q[activities_activity_type_name_cont]':'mountain biking',
-      'q[city_cont]':"seattle"
+      'q[state_eq]':"Washington"
       }
     },function(error,response, body){
       if(!error && response.statusCode === 200){
@@ -26,5 +26,9 @@ module.exports = {
         });
       }
     });
-  }//end of index
+  },//end of index
+
+  show: function(req,res) {
+    console.log(show)
+  }//end of show
 };//end of module

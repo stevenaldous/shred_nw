@@ -1,6 +1,9 @@
 body{
   background-color: #C8CAB9;
+  margin-top: 50px;
 }
-#pageForm{
-  height: 100vh;
+.navbar{
+  border-style: none;
+  background-color: rgba(255,255,255,1);
+  color: rgba(0,0,0,1);
 }

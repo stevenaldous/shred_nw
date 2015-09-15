@@ -28,9 +28,9 @@ ShredApp.config(['$routeProvider','$locationProvider','sailsResourceProvider',
     templateUrl: '/views/dirt/index.html',
     controller: 'DirtCtrl'
   })
-  .when('/',{
-    templateUrl: '/views/home.html',
-    controller: 'HomeCtrl'
+  .when('/dirt/show',{
+    templateUrl: '/views/dirt/show.html',
+    controller: 'DirtShowCtrl'
   })
   .otherwise({
     templateUrl: 'views/404.html'
