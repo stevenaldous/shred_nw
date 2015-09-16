@@ -13,8 +13,12 @@ ShredApp.config(['$routeProvider','$locationProvider','sailsResourceProvider',
 
   $routeProvider
   .when('/',{
-    templateUrl: '/views/home.html',
+    templateUrl: '/views/main/home.html',
     controller: 'HomeCtrl'
+  })
+  .when('/about',{
+    templateUrl: '/views/main/about.html',
+    controller: 'AboutCtrl'
   })
   .when('/snow',{
     templateUrl: '/views/snow/index.html',
@@ -32,7 +36,11 @@ ShredApp.config(['$routeProvider','$locationProvider','sailsResourceProvider',
     templateUrl: '/views/snow/show.html',
     controller: 'SnowShowCtrl'
   })
+  .when('/favorites',{
+    templateUrl: '/views/favorites/index.html',
+    controller: 'FavoriteCtrl'
+  })
   .otherwise({
-    templateUrl: 'views/404.html'
+    templateUrl: '/views/main/404.html'
   })
 }])

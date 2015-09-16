@@ -1,48 +1,35 @@
-ShredApp.controller('NavCtrl',['$scope',function($scope){
-  $scope.navCollapsed=true;
-}])
+ShredApp.controller('NavCtrl',
+  ['$scope','$modal','UserService',function
+  ($scope,$modal,UserService){
 
-// //////// material nav controller///////
-// ShredApp.controller('NavCtrl',
-//   ['$scope', '$timeout', '$mdSidenav', '$mdUtil', '$log', '$timeout',
-//   function($scope, $timeout, $mdSidenav, $mdUtil, $log, $timeout){
-//     console.log('in nav!')
-//     $scope.toggleLeft = buildToggler('left');
-//     $scope.toggleRight = buildToggler('right');
-//     /**
-//      * Build handler to open/close a SideNav; when animation finishes
-//      * report completion in console
-//      */
-//     function buildToggler(navID) {
-//       var debounceFn =  $mdUtil.debounce(function(){
-//             $mdSidenav(navID)
-//               .toggle()
-//               .then(function () {
-//                 $log.debug("toggle " + navID + " is done");
-//               });
-//           },200);
-//       return debounceFn;
-//     }
-//   }])
-// ShredApp.controller('LeftCtrl',
-// [ '$scope', '$timeout', '$mdSidenav', '$log',
-//  function ($scope, $timeout, $mdSidenav, $log) {
-//   console.log('in LeftCtrl!')
-//     $scope.close = function () {
-//       $mdSidenav('left').close()
-//         .then(function () {
-//           $log.debug("close LEFT is done");
-//         });
-//     };
-//   }])
-// ShredApp .controller('RightCtrl',
-//   [ '$scope', '$timeout', '$mdSidenav', '$log',
-//  function ($scope, $timeout, $mdSidenav, $log) {
-//   console.log('in RightCtrl!')
-//     $scope.close = function () {
-//       $mdSidenav('right').close()
-//         .then(function () {
-//           $log.debug("close RIGHT is done");
-//         });
-//     };
-//   }]);
+  $scope.navCollapsed=true;
+
+  $scope.UserService = UserService;
+    $scope.$watchCollection('UserService',function(){
+      $scope.currentUser = UserService.currentUser
+    })
+
+    $scope.showSignUp = function(){
+      $modal.open({
+        templateUrl:'/views/auth/signUpModal.html',
+        controller:'AuthSignUpModalCtrl'
+      })
+    }
+
+    $scope.showLogin = function(){
+      $modal.open({
+        templateUrl:'/views/auth/loginModal.html',
+        controller:'AuthLoginModalCtrl'
+      })
+    }
+    $scope.logout = function(){
+      UserService.logout(function(err,data){
+      })
+    }
+
+
+
+
+
+
+}])
