@@ -1,4 +1,19 @@
-<table class="table table-hover">
+<form ng-submit="searchTrails()">
+  <div class="form-group">
+    <label for="">Search for a trail:</label>
+      <div class="row">
+        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+          <input type="text" class="form-control" ng-model="searchTerm" placeholder="Search by trail name or city">
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2">
+          <button  type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+  </div>
+</form>
+
+
+<table class="table table-hover" >
   <thead>
     <tr>
       <th>Trail Name</th>
@@ -9,9 +24,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="trail in dirtTrails" weather lat="trail.lat" lon="trail.lon">
+    <tr ng-repeat="trail in dirtTrails " weather url="weather" lat="trail.lat" lon="trail.lon">
       <td><a href="/dirt/{{$parent.trail.id}}">{{$parent.trail.name}}</a></td>
-      <td>{{weatherData[0].weather[0].main}}</td>
+      <td><img src='http://openweathermap.org/img/w/{{weatherData[0].weather[0].icon}}.png'></td>
       <td>{{weatherData[0].main.temp}}°</td>
       <td>{{$parent.trail.city}}</td>
       <td><a target="_blank" href="{{$parent.trail.url}}">more info</a></td>

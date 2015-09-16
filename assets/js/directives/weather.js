@@ -1,3 +1,4 @@
+// //this directive goes to OpenWeather API and fetches current conditions
 ShredApp.directive('weather', function(){
   return{
     restrict:'A',
@@ -8,8 +9,6 @@ ShredApp.directive('weather', function(){
     controller: ['$scope', '$http', function($scope,$http){
         $scope.weatherData = [];
         $http({
-          // 5day forecast URL:http://api.openweathermap.org/data/2.5/forecast
-
           url:'http://api.openweathermap.org/data/2.5/weather',
           params:{
             lat:$scope.lat,
@@ -17,12 +16,10 @@ ShredApp.directive('weather', function(){
             units:'imperial'
           }
         }).success(function(data){
-          // console.log(data);
           $scope.weatherData.push(data)
-          console.log($scope.weatherData[0].weather[0].main)
         })
       }],
-      transclude: true,//controller end
+      transclude: true,
       link: function(scope, element, attrs, ctrl, transclude) {
       transclude(scope, function(clone) {
        element.append(clone);

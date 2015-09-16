@@ -1,0 +1,38 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Date:</th>
+      <th>{{weatherData[0].list[0].dt_txt}}</th>
+      <th>{{weatherData[0].list[5].dt_txt}}</th>
+      <th>{{weatherData[0].list[13].dt_txt}}</th>
+      <th>{{weatherData[0].list[21].dt_txt}}</th>
+      <th>{{weatherData[0].list[29].dt_txt}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Weather:</td>
+      <td><img src='http://openweathermap.org/img/w/{{weatherData[0].list[0].weather[0].icon}}.png'></td>
+      <td><img src='http://openweathermap.org/img/w/{{weatherData[0].list[5].weather[0].icon}}.png'></td>
+      <td><img src='http://openweathermap.org/img/w/{{weatherData[0].list[13].weather[0].icon}}.png'></td>
+      <td><img src='http://openweathermap.org/img/w/{{weatherData[0].list[21].weather[0].icon}}.png'></td>
+      <td><img src='http://openweathermap.org/img/w/{{weatherData[0].list[29].weather[0].icon}}.png'></td>
+    </tr>
+    <tr>
+      <td>Hi:</td>
+      <td>{{weatherData[0].list[0].main.temp_max}}</td>
+      <td>{{weatherData[0].list[5].main.temp_max}}</td>
+      <td>{{weatherData[0].list[13].main.temp_max}}</td>
+      <td>{{weatherData[0].list[21].main.temp_max}}</td>
+      <td>{{weatherData[0].list[29].main.temp_max}}</td>
+    </tr>
+    <tr>
+      <td>Lo:</td>
+      <td>{{weatherData[0].list[0].main.temp_min}}</td>
+      <td>{{weatherData[0].list[5].main.temp_min}}</td>
+      <td>{{weatherData[0].list[13].main.temp_min}}</td>
+      <td>{{weatherData[0].list[21].main.temp_min}}</td>
+      <td>{{weatherData[0].list[29].main.temp_min}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,3 +1,3 @@
-ShredApp.factory('Dirt', ['sailsResource', function(sailsResource){
-  return sailsResource('Dirt');
+ShredApp.factory('Snow', ['sailsResource', function(sailsResource){
+  return sailsResource('Snow');
 }]);

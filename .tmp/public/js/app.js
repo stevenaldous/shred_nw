@@ -1,11 +1,7 @@
 var ShredApp = angular.module('ShredApp', ['ngMaterial','ngRoute','sailsResource','ngMessages','ui.bootstrap'])
-console.log('its working!')
 
 ShredApp.config(['$routeProvider','$locationProvider','sailsResourceProvider',
   function($routeProvider,$locationProvider,sailsResourceProvider) {
-
-
-  console.log('in config')
 
 
   sailsResourceProvider.configuration = {
@@ -31,6 +27,10 @@ ShredApp.config(['$routeProvider','$locationProvider','sailsResourceProvider',
   .when('/dirt/:id',{
     templateUrl: '/views/dirt/show.html',
     controller: 'DirtShowCtrl'
+  })
+  .when('/snow/:id',{
+    templateUrl: '/views/snow/show.html',
+    controller: 'SnowShowCtrl'
   })
   .otherwise({
     templateUrl: 'views/404.html'

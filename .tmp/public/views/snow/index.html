@@ -1,3 +1,20 @@
-<div layout="row">
-<h1 flex>Snow!</h1>
-</div>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Weather</th>
+      <th>Temp</th>
+      <th>City</th>
+      <th>link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="trail in snowTrails" weather lat="trail.lat" lon="trail.lon">
+      <td><a href="/snow/{{$parent.trail.id}}">{{$parent.trail.name}}</a></td>
+      <td><img src='http://openweathermap.org/img/w/{{weatherData[0].weather[0].icon}}.png'></td>
+      <td>{{weatherData[0].main.temp}}°</td>
+      <td>{{$parent.trail.city}}</td>
+      <td><a target="_blank" href="{{$parent.trail.url}}">more info</a></td>
+    </tr>
+  </tbody>
+</table>
