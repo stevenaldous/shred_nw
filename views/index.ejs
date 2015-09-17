@@ -8,16 +8,16 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a id="navLink" class="navbar-brand" href="/">Shred WA</a>
+        <a class="navbar-brand" href="/">Shred WA</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div collapse="navCollapsed" class="navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div collapse="navCollapsed" class="navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li id="navLink" ><a href="/" >home</a></li>
-          <li id="navLink" ><a href="/about">about</a></li>
-          <li id="navLink" ><a href="/snow">snow</a></li>
-          <li id="navLink" ><a href="/dirt">dirt</a></li>
+          <li><a id="navlink" href="/" >home</a></li>
+          <li><a id="navlink" href="/about">about</a></li>
+          <li><a id="navlink" href="/snow">snow</a></li>
+          <li><a id="navlink" href="/dirt">dirt</a></li>
          <!--  <li id="navLink" ><a href="/favorites">favorites</a></li>
           <li id="navLink" ><a href="/login">login</a></li>
           <li id="navLink" ><a href="/signup">sign up</a></li> -->
@@ -27,47 +27,8 @@
       </div>
     </div><!-- /.navbar-collapse -->
   </nav>
-<div class="container">
-<ng-view></ng-view>
-</div>
 
+<div class="container-fluid">
+  <div class="row" id="site-viewport">
+    <ng-view></ng-view>
 
-
-
-<!-- material nav setup -->
-<!--
-<div id="pageForm" layout="column" ng-app="ShredApp">
-  <div ng-controller="NavCtrl" layout="column">
-    <section layout="row" flex>
-      <md-sidenav flex="10" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
-        <md-toolbar class="md-theme-brown">
-          <h1 class="md-toolbar-tools">Shred WA</h1>
-        </md-toolbar>
-        <md-content layout-padding ng-controller="LeftCtrl">
-          <md-button ng-click="close()" class="md-primary" hide-gt-md>
-            Close
-          </md-button>
-          <md-list>
-            <md-list-item><a href="/">home</a></md-list-item>
-            <md-list-item><a href="/snow">snow</a></md-list-item>
-            <md-list-item><a href="/dirt">dirt</a></md-list-item>
-          </md-list>
-
-
-
-        </md-content>
-      </md-sidenav>
-      <md-content flex="90" layout-padding>
-        <div layout="column" layout-fill layout-align="top center">
-          <md-button ng-click="toggleLeft()"
-              class="md-primary" hide-gt-md>
-            Open Nav
-          </md-button>
-        </div> -->
-<!--
-        <ng-view></ng-view> -->
-
-       <!-- </md-content> -->
- <!--    </section>
-  </div>
-</div> -->
