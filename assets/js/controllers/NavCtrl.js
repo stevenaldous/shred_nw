@@ -1,23 +1,3 @@
-ShredApp.controller('NavCtrl',
-  ['$scope','$modal','UserService',function
-  ($scope,$modal,UserService){
-
+ShredApp.controller('NavCtrl',['$scope',function($scope){
   $scope.navCollapsed=true;
-
-  $scope.UserService = UserService;
-    $scope.$watchCollection('UserService',function(){
-      $scope.currentUser = UserService.currentUser
-    })
-
-
-    // $scope.logout = function(){
-    //   UserService.logout(function(err,data){
-    //   })
-    // }
-
-
-
-
-
-
 }])
