@@ -29,11 +29,8 @@ module.exports = {
       delete obj.password;
       return obj;
     },
-    //associations
-    // favorites:{
-    //   collection:'Favorite',
-    //   via:'owner'
-    // },
+    //associations here when ready
+
   beforeCreate: function(values, callback) {
     bcrypt.hash(values.password, 10, function(err,hash){
       if(err) return callback(err);
