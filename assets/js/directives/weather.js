@@ -9,7 +9,7 @@ ShredApp.directive('weather', function(){
     controller: ['$scope', '$http', function($scope,$http){
         $scope.weatherData = [];
         $http({
-          url:'http://api.openweathermap.org/data/2.5/weather',
+          url:'/api/weather/current',
           params:{
             lat:$scope.lat,
             lon:$scope.lon,

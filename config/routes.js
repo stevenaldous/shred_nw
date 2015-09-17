@@ -2,7 +2,9 @@ module.exports.routes = {
 
   '/': 'PagesController.index',
 
-  '/api/weather' : 'WeaterController.index',
+  '/api/weather/current' : 'WeaterController.current',
+  '/api/weather/forecast' : 'WeaterController.forecast',
+
 
   'get *':{
   controller:"PagesController",
