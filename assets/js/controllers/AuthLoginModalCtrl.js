@@ -5,7 +5,7 @@ function($scope,$modalInstance,UserService){
   $scope.user={email:'',password:''};
 
   $scope.signUp = function(){
-    UserService.login($scope.user.email, $scope.user.password, function(err,data){
+    UserService.signup($scope.user.email, $scope.user.password, function(err,data){
       if(err){
         console.log(err)
         alert('Something terrible happened!')

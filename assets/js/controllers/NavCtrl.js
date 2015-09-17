@@ -9,23 +9,24 @@ ShredApp.controller('NavCtrl',
       $scope.currentUser = UserService.currentUser
     })
 
-    $scope.showSignUp = function(){
-      $modal.open({
-        templateUrl:'/views/auth/signUpModal.html',
-        controller:'AuthSignUpModalCtrl'
-      })
-    }
+    // $scope.showSignUp = function(){
+    //   $modal.open({
+    //     templateUrl:'/views/auth/signUpModal.html',
+    //     controller:'AuthSignUpModalCtrl'
+    //   })
+    // }
 
-    $scope.showLogin = function(){
-      $modal.open({
-        templateUrl:'/views/auth/loginModal.html',
-        controller:'AuthLoginModalCtrl'
-      })
-    }
-    $scope.logout = function(){
-      UserService.logout(function(err,data){
-      })
-    }
+    // $scope.showLogin = function(){
+    //   $modal.open({
+    //     templateUrl:'/views/auth/loginModal.html',
+    //     controller:'AuthLoginModalCtrl'
+    //   })
+    // }
+
+    // $scope.logout = function(){
+    //   UserService.logout(function(err,data){
+    //   })
+    // }
 
 
 

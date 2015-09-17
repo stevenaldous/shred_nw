@@ -1,4 +1,4 @@
-ShredApp.controller('AuthLoginModalCtrl',
+ShredApp.controller('AuthSignUpModalCtrl',
       ['$scope','$modalInstance','UserService',
 function($scope,$modalInstance,UserService){
 

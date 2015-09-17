@@ -1,4 +1,4 @@
-App.directive('alerts', function(){
+ShredApp.directive('alerts', function(){
   return {
     scope: {},
     controller: ['$scope','AlertService', function($scope, AlertService){

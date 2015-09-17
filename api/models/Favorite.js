@@ -8,7 +8,11 @@
 module.exports = {
 
   attributes: {
-
+    //associations
+    owner:{
+      model:'User',
+      defaultsTo:null
+    }
   }
 };
 
