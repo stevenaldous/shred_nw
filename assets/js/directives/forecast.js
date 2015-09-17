@@ -15,7 +15,7 @@ ShredApp.directive('forecast', function(){
           $scope.loading=true;
           console.log('fetchWeather 2');
           $http({
-            url:'http://pro.openweathermap.org/data/2.5/forecast',
+            url:'http://api.openweathermap.org/data/2.5/forecast',
             params:{
               lat:$scope.lat,
               lon:$scope.lon,

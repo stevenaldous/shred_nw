@@ -20,14 +20,6 @@ ShredApp.config(['$routeProvider','$locationProvider','sailsResourceProvider',
     templateUrl: '/views/main/about.html',
     controller: 'AboutCtrl'
   })
-  .when('/signup',{
-    templateUrl: '/views/auth/signUp.html',
-    controller: 'SignUpCtrl'
-  })
-  .when('/login',{
-    templateUrl: '/views/auth/login.html',
-    controller: 'LoginCtrl'
-  })
   .when('/snow',{
     templateUrl: '/views/snow/index.html',
     controller: 'SnowCtrl'
