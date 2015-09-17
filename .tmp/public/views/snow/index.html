@@ -1,20 +1,37 @@
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Weather</th>
-      <th>Temp</th>
-      <th>City</th>
-      <th>link</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="trail in snowTrails" weather lat="trail.lat" lon="trail.lon">
-      <td><a href="/snow/{{$parent.trail.id}}">{{$parent.trail.name}}</a></td>
-      <td><img src='http://openweathermap.org/img/w/{{weatherData[0].weather[0].icon}}.png'></td>
-      <td>{{weatherData[0].main.temp}}°</td>
-      <td>{{$parent.trail.city}}</td>
-      <td><a target="_blank" href="{{$parent.trail.url}}">more info</a></td>
-    </tr>
-  </tbody>
-</table>
+<div class="container index-container">
+  <br>
+  <form ng-submit="searchTrails()">
+    <div class="form-group dirt-search">
+        <div class="row">
+          <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            <input type="text" class="form-control" ng-model="searchTerm" placeholder="Search by trail name or city">
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2">
+            <button  type="submit">Search</button>
+          </div>
+        </div>
+    </div>
+  </form>
+  <div class="scroll-table">
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Weather</th>
+          <th>Temp</th>
+          <th>City</th>
+          <th>link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="trail in snowTrails" weather lat="trail.lat" lon="trail.lon">
+          <td><a href="/snow/{{$parent.trail.id}}">{{$parent.trail.name}}</a></td>
+          <td><img src='http://openweathermap.org/img/w/{{weatherData[0].weather[0].icon}}.png'/></td>
+          <td>{{weatherData[0].main.temp}}°</td>
+          <td>{{$parent.trail.city}}</td>
+          <td><a target="_blank" href="{{$parent.trail.url}}">more info</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
