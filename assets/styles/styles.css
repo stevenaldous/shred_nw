@@ -136,7 +136,7 @@ body{
   border: none;
 }
 .table-responsive{
-  overflow: scroll;
+  overflow: scroll !important;
   border: none;
 }
 
