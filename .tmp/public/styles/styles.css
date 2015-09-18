@@ -131,10 +131,6 @@ body{
 @-moz-document url-prefix() {
   fieldset { display: table-cell; }
 }
-.scroll-table{
-  overflow: scroll;
-  border: none;
-}
 .table-responsive{
   overflow: scroll !important;
   border: none;
