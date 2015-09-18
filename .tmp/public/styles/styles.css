@@ -41,11 +41,11 @@ body{
 /*  site continer styles  */
 #site-contain{
   background-color: rgba(0,0,0,.2);
-  /*background-color: yellow;*/
   height: 100%;
 }
 #site-viewport{
   margin-top: 60px;
+  margin-bottom: 60px;
   height: 100%;
   overflow: scroll;
   /*background-color: orange;*/
@@ -56,11 +56,11 @@ body{
 }
 .launch{
   font-family: 'Open Sans', sans-serif;
-  font-size: 100px;
+  font-size: 150px;
   color: rgba(255,255,255,.7);
 }
 .launch:hover{
-  font-size: 101px;
+  font-size: 201px;
   color: rgba(255,255,255,.9);
   text-decoration: none;
 }
@@ -120,7 +120,7 @@ body{
   fieldset { display: table-cell; }
 }
 .scroll-table{
-  height: 500px !important;
+  /*height: 80% !important;*/
   overflow: scroll;
 }
 .table-index thead{
@@ -183,7 +183,7 @@ body{
   color: rgba(255,255,255,.9);
   font-weight: bold;
 }
-.scroll-description{
+.scroll{
   overflow: scroll;
 }
 .show-info p{
@@ -206,10 +206,45 @@ body{
 #show-image{
   border: none;
 }
-/*  footer settings  */
+/*  About styles*/
+
+.about{
+  padding-top: 20px;
+  color: rgb(255,255,255);
+}
+.about-title{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+}
+.about .well{
+  background-color: transparent;
+  border:none;
+}
+.about .well p{
+  font-size: 25px;
+  font-family: 'Lora', serif;
+}
+.list-inline{
+  text-align: center
+}
+.icons{
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 50px;
+}
+.icons:hover{
+  height: 51px;
+}
+
+#last-well{
+  position: relative;
+  margin-bottom: 60px;
+}
+/*  footer styles  */
 #footer h1{
   position: absolute;
     bottom: 0;
     width: 100%;
-    height: 40px;
+    height: 60px;
 }
