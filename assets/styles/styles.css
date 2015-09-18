@@ -1,6 +1,9 @@
 body{
   background-image: url('/images/snake_run.jpg');
-  background-position: center center;
+  background-position: center center fixed;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 /*  Navbar  */
@@ -41,14 +44,16 @@ body{
 /*  site continer styles  */
 #site-contain{
   background-color: rgba(0,0,0,.2);
+  background-position: center center;
+  background-size: cover;
   height: 100%;
+padding-bottom: 60px;
 }
 #site-viewport{
+  position: relative;
   margin-top: 60px;
-  margin-bottom: 60px;
   height: 100%;
   overflow: scroll;
-  /*background-color: orange;*/
 }
  /*  home syles  */
 .launch-row{
@@ -66,8 +71,6 @@ body{
 }
 
 /*  shred index pages  */
-.index-container{
-}
 .dirt-search input{
   font-family: 'Lora', serif;
   background: none;
@@ -249,12 +252,12 @@ body{
   margin-bottom: 60px;
 }
 /*  footer styles  */
-#footer h1{
+/*#footer h1{
   position: absolute;
     bottom: 0;
     width: 100%;
     height: 60px;
-}
+}*/
 input:focus,
 select:focus,
 textarea:focus,
