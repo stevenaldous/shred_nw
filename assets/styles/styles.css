@@ -122,7 +122,7 @@ body{
 
 .table-index thead{
   font-family: 'Open Sans', sans-serif;
-  font-size: 30px;
+  font-size: 26px;
   color: rgba(255,255,255,.9);
   font-weight: bold;
   border-top: none;
@@ -130,7 +130,7 @@ body{
 .table-index tbody{
   border-top: none;
   font-family: 'Lora', serif;
-  font-size: 25px;
+  font-size: 24px;
   color: rgba(255,255,255,.8);
   font-weight: bold;
 }
@@ -140,6 +140,14 @@ body{
  .table th{
   border-bottom: 2px solid rgba(255,255,255,.8) !important;
  }
+ .table-index .glyphicon{
+  border: none;
+  background: none;
+  color: rgba(255,255,255,.8);
+ }
+ .table-index .glyphicon:hover{
+  color: rgba(255,255,255,1);
+ }
 .table-index a{
   font-family: 'Lora', serif;
   font-size: 25px;
@@ -147,11 +155,14 @@ body{
   text-decoration: none;
 }
 .table-index a:hover{
-  color: rgba(255,255,255,.9);
+  color: rgba(255,255,255,1);
   text-decoration: none;
   font-weight: bold;
 }
 /*  shred show page styles  */
+.show-container{
+  background-color: red;
+}
 .show-title{
   font-family: 'Open Sans', sans-serif;
   color: rgba(255,255,255,.9);
@@ -172,13 +183,18 @@ body{
   color: rgba(255,255,255,.9);
   font-weight: bold;
 }
+.info{
+  background-color: yellow;
+}
 .show-info p{
+  background-color: blue;
   font-family: 'Lora', serif;
   font-size: 20px;
   color: rgba(255,255,255,.9);
   font-weight: bold;
 }
 .show-info a{
+  background-color: blue;
   font-family: 'Lora', serif;
   font-size: 18px;
   color: rgba(255,255,255,.9);
@@ -187,6 +203,12 @@ body{
 .show-info a:hover{
   font-size: 19px;
   color: rgb(255,255,255);
+}
+#show-image{
+  height: 200px;
+  width:300px;
+  background-color: green;
+  border: transparent;
 }
 /*  footer settings  */
 #footer h1{

@@ -13,7 +13,7 @@
     </div>
   </form>
   <div class="scroll-table">
-    <table class="table table-condensed">
+    <table class="table table-condensed table-index">
       <thead>
         <tr>
           <th>Name</th>
@@ -29,7 +29,7 @@
           <td><img src='http://openweathermap.org/img/w/{{weatherData[0].weather[0].icon}}.png'/></td>
           <td>{{weatherData[0].main.temp}}°</td>
           <td>{{$parent.trail.city}}</td>
-          <td><a target="_blank" href="{{$parent.trail.url}}">more info</a></td>
+          <td><a target="_blank" href="{{$parent.trail.url}}"><span class="glyphicon glyphicon-link"></span></a></td>
         </tr>
       </tbody>
     </table>

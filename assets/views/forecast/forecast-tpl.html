@@ -2,11 +2,11 @@
   <thead>
     <tr>
       <th></th>
-      <th>{{weatherData[0].list[0].dt}}</th>
-      <th>{{weatherData[0].list[5].dt}}</th>
-      <th>{{weatherData[0].list[13].dt}}</th>
-      <th>{{weatherData[0].list[21].dt}}</th>
-      <th>{{weatherData[0].list[29].dt}}</th>
+      <th>{{weatherData[0].list[0].dt * 1000 | date: 'mediumDate'}}</th>
+      <th>{{weatherData[0].list[8].dt * 1000 | date: 'mediumDate'}}</th>
+      <th>{{weatherData[0].list[16].dt * 1000 | date: 'mediumDate'}}</th>
+      <th>{{weatherData[0].list[24].dt * 1000 | date: 'mediumDate'}}</th>
+      <th>{{weatherData[0].list[32].dt * 1000 | date: 'mediumDate'}}</th>
     </tr>
   </thead>
   <tbody>
