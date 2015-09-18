@@ -73,9 +73,6 @@ body{
 }
 
 /*  shred index pages  */
-.index-container{
-
-}
 .dirt-search input{
   font-family: 'Lora', serif;
   background: none;
@@ -135,9 +132,14 @@ body{
   fieldset { display: table-cell; }
 }
 .scroll-table{
-  /*height: 80% !important;*/
   overflow: scroll;
+  border: none;
 }
+.table-responsive{
+  overflow: scroll;
+  border: none;
+}
+
 .table-index thead{
   font-family: 'Open Sans', sans-serif;
   font-size: 26px;
