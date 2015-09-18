@@ -40,6 +40,7 @@ body{
   background: none;
   color: rgba(0,0,0,.7);
   font-size: 20px;
+
 }
 /*  site continer styles  */
 #site-contain{
@@ -47,7 +48,8 @@ body{
   background-position: center center;
   background-size: cover;
   height: 100%;
-padding-bottom: 60px;
+  padding-bottom: 60px;
+  overflow: scroll;
 }
 #site-viewport{
   position: relative;
@@ -71,6 +73,9 @@ padding-bottom: 60px;
 }
 
 /*  shred index pages  */
+.index-container{
+
+}
 .dirt-search input{
   font-family: 'Lora', serif;
   background: none;
