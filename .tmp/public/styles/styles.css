@@ -7,7 +7,7 @@ body{
 .navbar{
   border-style: none;
   background-color: rgba(255,255,255,.8);
-  color: rgba(0,0,0,.8);
+  color: rgba(0,0,0,.9);
 }
 .navbar-brand{
   font-family: 'Open Sans', sans-serif;
@@ -39,10 +39,16 @@ body{
   font-size: 20px;
 }
 /*  site continer styles  */
+#site-contain{
+  background-color: rgba(0,0,0,.2);
+  /*background-color: yellow;*/
+  height: 100%;
+}
 #site-viewport{
   margin-top: 60px;
   height: 100%;
   overflow: scroll;
+  /*background-color: orange;*/
 }
  /*  home syles  */
 .launch-row{
@@ -61,8 +67,6 @@ body{
 
 /*  shred index pages  */
 .index-container{
-  background-color: rgba(0,0,0,.2);
-
 }
 .dirt-search input{
   font-family: 'Lora', serif;
@@ -73,14 +77,14 @@ body{
   border-bottom-style: solid 2px;
   border-bottom-color: rgba(255,255,255,.8);
   font-size: 16px;
-  color: rgba(255,255,255,.8);
+  color: rgba(255,255,255,.9);
   text-decoration: none;
   font-weight: bold;
   outline: none;
 }
 .dirt-search input::-webkit-input-placeholder{
   font-family: 'Lora', serif;
-  color: rgba(255,255,255,.7);
+  color: rgba(255,255,255,.8);
   outline: none;
 }
 .dirt-search input:active{
@@ -100,7 +104,7 @@ body{
   background: none;
   border: none;
   font-size: 16px;
-  color: rgba(255,255,255,.8);
+  color: rgba(255,255,255,.9);
   text-decoration: none;
   font-weight: bold;
 }
@@ -108,7 +112,7 @@ body{
   background: none;
   border:none;
   font-size: 17px;
-  color: rgba(255,255,255,.8);
+  color: rgba(255,255,255,1);
   text-decoration: none;
   font-weight: bold;
 }
@@ -119,7 +123,6 @@ body{
   height: 500px !important;
   overflow: scroll;
 }
-
 .table-index thead{
   font-family: 'Open Sans', sans-serif;
   font-size: 26px;
@@ -136,18 +139,18 @@ body{
 }
 .table td {
   border: none !important;
- }
- .table th{
+}
+.table th{
   border-bottom: 2px solid rgba(255,255,255,.8) !important;
- }
- .table-index .glyphicon{
+}
+.table-index .glyphicon{
   border: none;
   background: none;
   color: rgba(255,255,255,.8);
- }
- .table-index .glyphicon:hover{
+}
+.table-index .glyphicon:hover{
   color: rgba(255,255,255,1);
- }
+}
 .table-index a{
   font-family: 'Lora', serif;
   font-size: 25px;
@@ -160,9 +163,6 @@ body{
   font-weight: bold;
 }
 /*  shred show page styles  */
-.show-container{
-  background-color: red;
-}
 .show-title{
   font-family: 'Open Sans', sans-serif;
   color: rgba(255,255,255,.9);
@@ -183,20 +183,19 @@ body{
   color: rgba(255,255,255,.9);
   font-weight: bold;
 }
-.info{
-  background-color: yellow;
+.scroll-description{
+  overflow: scroll;
 }
 .show-info p{
-  background-color: blue;
   font-family: 'Lora', serif;
   font-size: 20px;
   color: rgba(255,255,255,.9);
   font-weight: bold;
 }
 .show-info a{
-  background-color: blue;
+  padding-left: 20px;
   font-family: 'Lora', serif;
-  font-size: 18px;
+  font-size: 20px;
   color: rgba(255,255,255,.9);
   text-decoration: none;
 }
@@ -205,10 +204,7 @@ body{
   color: rgb(255,255,255);
 }
 #show-image{
-  height: 200px;
-  width:300px;
-  background-color: green;
-  border: transparent;
+  border: none;
 }
 /*  footer settings  */
 #footer h1{

@@ -1,12 +1,16 @@
 <div class="container index-container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+
 <br>
   <form ng-submit="searchTrails()">
     <div class="form-group dirt-search">
         <div class="row">
-          <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-            <input type="text" class="form-control" ng-model="searchTerm" placeholder="Search by trail name or city">
+          <div class="col-xs-10 col-sm-10 col-md-8 col-lg-8">
+            <input type="text" class="form-control" ng-model="searchTerm" placeholder="Search for trail by name or city">
           </div>
-          <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2">
+          <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
             <button  type="submit">Search</button>
           </div>
         </div>
@@ -23,15 +27,19 @@
           <th>Link</th>
         </tr>
       </thead>
-      <tbody>
-        <tr ng-repeat="trail in dirtTrails " weather url="weather" lat="trail.lat" lon="trail.lon">
-          <td><a href="/dirt/{{$parent.trail.id}}">{{$parent.trail.name}}</a></td>
-          <td><img src='http://openweathermap.org/img/w/{{weatherData[0].weather[0].icon}}.png'></td>
-          <td>{{weatherData[0].main.temp}}°</td>
-          <td>{{$parent.trail.city}}</td>
-          <td><a target="_blank" href="{{$parent.trail.url}}">more info</a></td>
-        </tr>
-      </tbody>
+      <div class="row">
+        <tbody>
+          <tr ng-repeat="trail in dirtTrails " weather url="weather" lat="trail.lat" lon="trail.lon">
+            <td><a href="/dirt/{{$parent.trail.id}}">{{$parent.trail.name}}</a></td>
+            <td><img src='http://openweathermap.org/img/w/{{weatherData[0].weather[0].icon}}.png'></td>
+            <td>{{weatherData[0].main.temp}}°</td>
+            <td>{{$parent.trail.city}}</td>
+            <td><a target="_blank" href="{{$parent.trail.url}}"><span class="glyphicon glyphicon-link"></span></a></td>
+          </tr>
+        </tbody>
+      </div>
     </table>
+  </div>
+    </div>
   </div>
 </div>

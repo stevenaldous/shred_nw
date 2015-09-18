@@ -1,21 +1,22 @@
 <div class="container show-container">
   <div class="row">
-    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-md-offset-1 col-lg-offset-1">
-      <div class="container info">
-        <p class="show-title">{{trail.name}}</p>
-        <div class="row">
-          <forecast lat="trail.lat" lon="trail.lon"></forecast>
-          <div class="row show-info">
-            <div class="scroll-description">
-              <p>{{trail.description}}</p>
-              <p><a href="{{trail.url}}" target="_blank">more info</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="col-md-12 col-lg-12">
+      <p class="show-title">{{trail.name}}</p>
     </div>
-    <div class=" col-md-offset-1 col-lg-offset-1 col-xs-4 col-sm-4 col-md-4 col-lg-4">
+  </div>  <!-- end of header row -->
+  <div class = "row">
+    <div class="col-md-6 col-lg-6">
+      <forecast lat="trail.lat" lon="trail.lon"></forecast>
+    </div>
+    <div class="col-md-6 col-lg-6">
       <img src="{{trail.image}}" id="show-image" class="img-responsive"/>
+    </div>
+  </div>
+  <br>
+  <div class="row show-info">
+    <div class="scroll-description">
+      <p>{{trail.description}}</p>
+      <p><a href="{{trail.url}}" target="_blank">more info</a></p>
     </div>
   </div>
 </div>
