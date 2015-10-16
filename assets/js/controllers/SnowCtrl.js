@@ -6,6 +6,11 @@ ShredApp.controller('SnowCtrl',
   $scope.snowTrails=[];
   $scope.searchTerm='';
 
+  Snow.query().then(function(trail){
+    $scope.snowTrails=trail
+    $rootScope.loading = false;
+  })
+
   $scope.searchTrails = function(){
     console.log('searching for: ',$scope.searchTerm);
     var searchQuery = {
@@ -16,8 +21,9 @@ ShredApp.controller('SnowCtrl',
         ]
       }
     };
-    Snow.query().then(function(trail){
-      $scope.snowTrails=trail
+    Snow.query(searchQuery).then(function(data){
+      console.log(data)
+      $scope.snowTrails=data
       $rootScope.loading = false;
     })
   };

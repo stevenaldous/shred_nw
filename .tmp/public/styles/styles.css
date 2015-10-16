@@ -9,12 +9,12 @@ body{
 /*  Navbar  */
 .navbar{
   border-style: none;
-  background-color: rgba(255,255,255,.8);
+  background-color: rgba(255,255,255,1);
   color: rgba(0,0,0,.9);
 }
 .navbar-brand{
   font-family: 'Open Sans', sans-serif;
-  color: rgba(0,0,0,.6);
+  color: rgba(0,0,0,.7);
   font-size: 35px;
 }
 .navbar-brand:hover{
@@ -44,7 +44,7 @@ body{
 }
 /*  site continer styles  */
 #site-contain{
-  background-color: rgba(0,0,0,.2);
+  background-color: rgba(0,0,0,.3);
   background-position: center center;
   background-size: cover;
   height: 100%;
@@ -64,11 +64,11 @@ body{
 .launch{
   font-family: 'Open Sans', sans-serif;
   font-size: 150px;
-  color: rgba(255,255,255,.7);
+  color: rgba(255,255,255,.9);
 }
 .launch:hover{
   font-size: 151px;
-  color: rgba(255,255,255,.9);
+  color: rgba(255,255,255,1);
   text-decoration: none;
 }
 
@@ -89,7 +89,7 @@ body{
 }
 .dirt-search input::-webkit-input-placeholder{
   font-family: 'Lora', serif;
-  color: rgba(255,255,255,.8);
+  color: rgba(255,255,255,.9);
   outline: none;
 }
 .dirt-search input:active{
@@ -100,7 +100,7 @@ body{
   border-bottom-style: solid 2px;
   border-bottom-color: rgba(255,255,255,.8);
   font-size: 16px;
-  color: rgba(255,255,255,.8);
+  color: rgba(255,255,255,.9);
   text-decoration: none;
   font-weight: bold;
    outline:none;
@@ -139,7 +139,7 @@ body{
 .table-index thead{
   font-family: 'Open Sans', sans-serif;
   font-size: 26px;
-  color: rgba(255,255,255,.9);
+  color: rgba(255,255,255,1);
   font-weight: bold;
   border-top: none;
 }
@@ -147,7 +147,7 @@ body{
   border-top: none;
   font-family: 'Lora', serif;
   font-size: 24px;
-  color: rgba(255,255,255,.8);
+  color: rgba(255,255,255,.9);
   font-weight: bold;
 }
 .table td {
@@ -159,7 +159,7 @@ body{
 .table-index .glyphicon{
   border: none;
   background: none;
-  color: rgba(255,255,255,.8);
+  color: rgba(255,255,255,.9);
 }
 .table-index .glyphicon:hover{
   color: rgba(255,255,255,1);
@@ -167,7 +167,7 @@ body{
 .table-index a{
   font-family: 'Lora', serif;
   font-size: 25px;
-  color: rgba(255,255,255,.8);
+  color: rgba(255,255,255,.9);
   text-decoration: none;
 }
 .table-index a:hover{

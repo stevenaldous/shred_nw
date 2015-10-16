@@ -13,7 +13,8 @@ ShredApp.directive('weather', function(){
           params:{
             lat:$scope.lat,
             lon:$scope.lon,
-            units:'imperial'
+            units:'imperial',
+            APPID:'74771337abc01c5e97450c4e12e4f97f'
           }
         }).success(function(data){
           $scope.weatherData.push(data)

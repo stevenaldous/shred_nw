@@ -27,7 +27,6 @@ ShredApp.controller('DirtCtrl',
       console.log(data)
       $scope.dirtTrails=data
       $rootScope.loading = false;
-      console.log('done')
     })
   }
 

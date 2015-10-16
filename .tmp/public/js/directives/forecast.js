@@ -10,16 +10,15 @@ ShredApp.directive('forecast', function(){
         $scope.weatherData = [];
         $scope.loading = false;
         var fetchWeather = function() {
-          console.log('fetchWeather 1');
           if($scope.loading || !$scope.lat || !$scope.lon) return;
           $scope.loading=true;
-          console.log('fetchWeather 2');
           $http({
             url:'/api/weather/forecast',
             params:{
               lat:$scope.lat,
               lon:$scope.lon,
-              units:'imperial'
+              units:'imperial',
+              APPID:'74771337abc01c5e97450c4e12e4f97f'
             }
           }).success(function(data){
             $scope.weatherData.push(data)
